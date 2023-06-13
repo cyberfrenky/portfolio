@@ -1,0 +1,25 @@
+%default-distance{
+    margin: 0 5px;
+    padding: 5px;
+}
+%distance-reset{
+    margin: 0;
+    padding: 0;
+}
+
+%text-reset{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+$nav-size: 5vw;
+
+%nav-size {
+  height: $nav-size;
+}
+
+%full-screen-size{
+    height: calc(100vh - 2* #{$nav-size});
+}
+

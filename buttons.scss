@@ -1,0 +1,33 @@
+
+%button-default{
+    
+    height: 50px;
+    width: 150px;
+    
+    @include font(20px,$color-white,bold);
+    margin: 0 10px;
+    border-radius: 5px;
+
+    @include flex-center(center,center,row);
+    
+    @include button($color-black, $color-blue);
+    
+    &:hover{
+        @include button($color-blue, $color-black);
+        @include font(20px,$color-black,bold);
+        
+    }
+
+}
+
+@media only screen and (max-width:850px) {
+    %button-default{
+        margin: 0;
+    }
+}
+
+
+
+
+
+

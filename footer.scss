@@ -1,0 +1,75 @@
+.footer{
+    @include box-reset(0,0);
+    @include flex-center(center,center,column);
+    @include default-content-settings;
+    background-color: $color-black-transparentLow;
+}
+.footer-navigation{
+    
+    
+    .social-professional{
+        @include flex-center(flex-end,center,row);
+    }
+
+    
+
+
+    .social-link{
+        @extend %text-reset;
+        
+    }
+    .fa-brands{
+        font-size: 50px;
+        padding: 0;
+        margin: 0 10px;
+        transition: scale 0.3s ease-in-out;
+
+        &:hover{
+            scale: 1.3;
+        }
+        
+        
+    }
+
+    .fa-instagram{
+        color: $color-black;
+        border-radius: 15px;
+        background-image: linear-gradient(#8a3ab9,#e95950,#bc2a8d,#fccc63,#fbad50,#cd486b,#4c68d7);
+    }
+    .fa-youtube{
+        color: $color-red;
+    }
+    .fa-github{
+        background-color: white;
+        border-radius: 50%;
+        color:$color-black;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .footer-navigation{
+    
+    
+        .social-professional,.social-private{
+            @include flex-center(center,center,row);
+            margin: 10px;
+        }
+    }    
+}
+
+
+
+
+
+
+.legal-wrapper{
+    @include default-content-settings;
+    .legal-link{
+        
+
+        .legal{
+            
+            @extend %default-distance;
+        }
+    }
+}

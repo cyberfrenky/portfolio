@@ -1,0 +1,36 @@
+.about-wrapper{
+    @include wrapper(relative,show,auto);
+    @include flex-center(space-between,center,column);
+
+    &::before{
+        @include pseudo(100%, 100%, $color-black,0.7); // height, width
+        z-index: 1;
+        
+        
+    }
+}
+
+
+.about-content{
+    @include default-content-settings;
+    @include flex-center(flex-start,center,column); //justify,align,direction
+    
+    .about-heading{
+        .heading{
+            @include font(40px, white, bold);
+            margin: 50px;
+        }
+        
+    }
+
+    .picture{
+        max-height: 400px;
+        margin: 50px;
+    }
+
+    p{
+        @include font(20px,$color-blue,normal);
+    }
+
+
+}

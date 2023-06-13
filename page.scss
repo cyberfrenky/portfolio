@@ -1,0 +1,9 @@
+
+.container-fluid,.list,.main-content{
+    @include box-reset(0 auto,0); //margin, padding
+}
+
+
+
+
+

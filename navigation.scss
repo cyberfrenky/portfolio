@@ -1,0 +1,37 @@
+.navbar{
+    position: relative;
+    
+    z-index: 500;
+    background-color: $color-black-transparentMid;
+    width: 100%;
+    .navbar-toggler{
+        background-color: $color-blue;
+    }
+    .navbar-nav{
+        @include flex-center(center,center,row);
+        .list{
+            @extend %distance-reset;
+        }
+    }
+
+    .link{
+        @extend %button-default;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .navbar{
+        
+        .navbar-nav{
+            @include flex-center(center,center,column);
+            .nav-item{
+                width: 100%;
+            }
+            .link{
+                width: 100%;
+                
+            }
+        }   
+    }
+    
+}
