@@ -4,11 +4,16 @@
     align-items: $ai;
     flex-direction: $fd;
 }
-
 @mixin box-reset($margin,$padding){
     margin: $margin;
     padding: $padding;
 }
+@mixin list-reset{
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+
 
 
 @mixin pseudo($height,$width,$bck,$opc){
@@ -37,7 +42,24 @@
 }
 
 @mixin box-shadow{
-    box-shadow: 0 0 25px $color-blue;
+    box-shadow: 0 0 50px $color--pale-cyan-blue;
+}
+@mixin shadow-glow{
+    animation: glow 3s infinite ease-in-out;
+    @keyframes glow {
+        0%{
+            box-shadow: 0 0 0 $color--pale-cyan-blue;
+        }
+
+        50%{
+            box-shadow: 0 0 50px $color--pale-cyan-blue;
+        }
+
+
+        100%{
+            box-shadow: 0 0 0 $color--pale-cyan-blue;
+        }
+    }
 }
 
 
@@ -53,4 +75,10 @@
     position: $position;
     height: $height;    
     overflow: $overflow;
+}
+
+@mixin card-border{
+    border: 2px solid $color--vivid-cyan-blue;
+    border-radius: 25px;
+    overflow: hidden;
 }

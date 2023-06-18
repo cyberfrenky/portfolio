@@ -1,11 +1,11 @@
 .navbar{
     position: relative;
-    
+    padding: 20px;
     z-index: 500;
-    background-color: $color-black-transparentMid;
+    background-color: $color-white-transparentHigh;
     width: 100%;
     .navbar-toggler{
-        background-color: $color-blue;
+        background-color: $color--vivid-cyan-blue;
     }
     .navbar-nav{
         @include flex-center(center,center,row);
@@ -17,7 +17,14 @@
     .link{
         @extend %button-default;
     }
+
+    .logo-img{
+        width: 100px;
+        border-radius: 50%;
+        background-color: black;
+    }
 }
+
 
 @media only screen and (max-width:800px) {
     .navbar{

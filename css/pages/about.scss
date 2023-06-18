@@ -1,0 +1,77 @@
+.about-wrapper{
+    @include wrapper(relative,show,auto);
+    @include flex-center(space-between,center,column);
+    overflow-x: hidden;
+    &::before{
+        @include pseudo(100%, 100%, $color-black,0.7); // height, width
+        z-index: 1;
+        
+        
+    }
+}
+
+
+.about-content{
+    @include default-content-settings;
+    @include flex-center(flex-start,center,column); //justify,align,direction
+    
+    .about-heading{
+        .h-wrap1,.h-wrap2{
+            .heading{
+                @include flex-center(center,center,row);
+                @include font(60px, white, bold);
+                padding: 20px 0;
+                text-align: center;
+                animation: scale-text 5s infinite;
+            }
+        }
+
+        @keyframes scale-text {
+            0%{
+                scale: 1;
+            }
+            50%{
+                scale: 1.2;
+            }
+            100%{
+                scale: 1;
+            }
+        }
+        
+        
+    }
+
+    .picture{
+        max-height: 400px;
+        @include box-shadow;
+        margin: 50px;
+    }
+    .text-content{
+        
+        .text{
+            @include font(20px,$color-white,normal);
+            text-align:justify;
+        }
+
+        .text,.image{
+            padding: 20px;
+        }
+        .content-card{
+            background-color: $color-black-transparentLow;
+            border: 2px solid $color--vivid-cyan-blue;
+            margin: 10px 0;
+            border-radius: 25px;
+            overflow: hidden;
+            .image{
+                background-color: $color-white-transparentHigh;
+            }
+        }
+        .ct2,.ct4,.ct6{
+            flex-direction: row-reverse;
+        }
+
+    }
+    
+
+
+}

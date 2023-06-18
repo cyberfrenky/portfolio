@@ -1,0 +1,104 @@
+
+.portfolio-wrapper{
+    @include wrapper(relative,hidden,100vh);
+    @include flex-center(space-between,center,column);
+    
+   
+    &::before{
+        @include pseudo(100%, 100%, $color-black,0.5); // height, width
+        z-index: 1;
+        
+        
+    }
+
+    
+}
+
+@media only screen and (max-width:800px) {
+    .portfolio-wrapper{
+        @include wrapper(relative,hidden,auto);
+    }
+}
+.main-content{
+    @include flex-center(space-between,center,column); //justify,align,direction
+    @include default-content-settings;
+    
+
+    .pic{
+        border-radius: 25px;
+        max-height: 400px;
+        @include shadow-glow;
+        margin: 50px 0;
+        
+    }  
+
+    .profile-heading{
+        color: $color-white;
+        
+        .heading,.sub-heading{
+            background-color: $color-black-transparentMid;
+            font-size: 40px;
+            border-radius: 25px;
+            padding: 20px;
+            @include shadow-glow;
+            
+            
+        }
+
+        
+    }
+    
+    .profile-picture{
+        max-height: 55vh;
+        
+
+
+            
+
+
+        .normal-picture,.hover-picture{
+            transition: all .7s ease-in-out;
+        }
+        .hover-picture{
+    
+        
+            scale: 0;
+            width: 0;
+            opacity: 0;
+    
+        }
+          
+
+
+        &:hover{
+            .normal-picture {
+
+                scale: 0; 
+                width: 0;
+                opacity: 0;
+            }
+            .hover-picture {
+                scale: 1;
+                width: auto;
+                opacity: 1;
+
+            }
+        }
+
+
+    }
+    
+}
+@media only screen and (max-width:850px) {
+    .main-content{
+        text-align: center;
+        .profile-picture{
+            
+            max-height: 100vh;
+        }
+       
+    }
+}
+
+
+

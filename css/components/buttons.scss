@@ -1,19 +1,23 @@
 
 %button-default{
     
-    height: 50px;
-    width: 150px;
+    height: 40px;
+    width: 130px;
     
-    @include font(20px,$color-white,bold);
     margin: 0 10px;
     border-radius: 5px;
 
+   
+
+    @include font(20px,$color-white,normal);
+
     @include flex-center(center,center,row);
     
-    @include button($color-black, $color-blue);
+    @include button($color-black, $color--vivid-cyan-blue);
     
+     transition: all .5s ease-in-out;
     &:hover{
-        @include button($color-blue, $color-black);
+        @include button($color--vivid-cyan-blue, $color-white);
         @include font(20px,$color-black,bold);
         
     }

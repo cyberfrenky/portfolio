@@ -1,0 +1,71 @@
+
+.competence-wrapper{
+    @include wrapper(relative,show,auto);
+    @include flex-center(space-between,center,column);
+
+    &::before{
+        @include pseudo(100%, 100%, $color-black,0.7); // height, width
+        z-index: 1;
+        
+        
+    }
+
+    .competence{
+        z-index: 5;
+        .competence-content{
+            margin: auto;
+        }
+        .competence-card{
+            @include flex-center(center,center,column);
+        
+            color: $color-white;
+            background-color: $color-black-transparentMid;
+
+            padding: 20px;
+            margin: 20px 5px;
+
+            @include card-border;
+        
+            
+
+            .competence-header{
+                
+                .header{
+                    margin: 30px 5px;
+                    padding: 10px;
+                    
+                    border-radius: 25px;
+                    @include shadow-glow;
+
+                }
+
+                
+            }
+
+            .list-item-link{
+                @include list-reset;
+                @include font(25px,$color-white,normal);
+                
+            }
+
+            .list{
+                @include flex-center(center,center,column);
+            }
+
+            .web-wrap{
+                width: 100%
+            }
+        }
+        
+        .web-img{
+            @include flex-center(center,center,row);
+            min-height: 400px;
+            .image{
+                width: 100%;
+                
+            }
+        }
+    }
+    
+}
+
